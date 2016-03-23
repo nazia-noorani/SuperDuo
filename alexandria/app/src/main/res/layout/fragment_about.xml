@@ -1,0 +1,27 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="it.jaschke.alexandria.About">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+    <ImageView
+        android:layout_width="@dimen/about_img_width"
+        android:layout_height="@dimen/about_img_height"
+        android:id="@+id/imageView"
+        android:layout_marginTop="@dimen/margin_book_cover"
+        android:layout_gravity="center"
+        android:background="@drawable/ic_launcher"
+        />
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about_text"
+        style="@style/TextViewAbout"
+       />
+    </LinearLayout>
+</FrameLayout>

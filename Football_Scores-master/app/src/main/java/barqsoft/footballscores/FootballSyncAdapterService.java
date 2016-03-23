@@ -1,0 +1,29 @@
+package barqsoft.footballscores;
+
+/**
+ * Created by nazianoorani on 22/03/16.
+ */
+
+import android.app.Service;
+        import android.content.Intent;
+        import android.os.IBinder;
+        import android.util.Log;
+
+public class FootballSyncAdapterService extends Service {
+    private static final Object sSyncAdapterLock = new Object();
+    private static FootballSyncAdapter sFootballSyncAdapter = null;
+
+    @Override
+    public void onCreate() {
+        Log.d("FootballSyncService", "onCreate - FootballSyncService");
+        synchronized (sSyncAdapterLock) {
+            if (sFootballSyncAdapter == null) {
+                sFootballSyncAdapter = new FootballSyncAdapter(getApplicationContext(), true);
+            }
+        }
+    }
+    @Override
+    public IBinder onBind(Intent intent) {
+        return sFootballSyncAdapter.getSyncAdapterBinder();
+    }
+}
