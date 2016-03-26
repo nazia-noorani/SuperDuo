@@ -21,10 +21,9 @@ public class DetailWidgetProvider extends AppWidgetProvider {
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         Log.v(LOG_TAG, "Updating detail widget");
-        // Perform this loop procedure for each App Widget that belongs to this provider
+
         for (int appWidgetId : appWidgetIds) {
             RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.detail_widget);
-
             // Create an Intent to launch MainActivity
             Intent intent = new Intent(context, MainActivity.class);
             PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);

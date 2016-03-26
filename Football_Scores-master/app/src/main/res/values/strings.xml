@@ -34,7 +34,10 @@
         During the off season, fake data will be added to the app.
     </string>
     <string name="widget_text">This is a widget probably.</string>
+
     <string name="api_key"></string>
+
+    
     <string name="Arsenal_London_FC" translatable="false">Arsenal London FC</string>
     <string name="Manchester_United_FC" translatable="false">Manchester United FC</string>
     <string name="Swansea_City" translatable="false">Swansea City</string>
